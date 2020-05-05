@@ -3,6 +3,7 @@
 Created on Wed Mar 20 16:51:25 2019
 
 @author: Cédric Berteletti
+@modifier : Axel Faligot-Girardelli
 
 Adapted for Python 3
 Original work: https://gist.github.com/genekogan/ebd77196e4bf0705db51f86431099e57
@@ -10,9 +11,16 @@ Also adapted from:
 _ http://stackoverflow.com/questions/20716842/python-download-images-from-google-image-search
 _ http://penseeartificielle.fr/massive-google-image-scraping/
 
+/!\ The program need :
+    - Mozilla
+    - geckodriver.exe in the file
+    - selenium package downloaded
+    - beautifulsoup package downloaded
+    - python 3.8
 
 Usage examples :
-_ by command line : python image_search_scraper.py --search "cat" --nb_images 10 --directory "dataset/"
+_ by command line in Py 3.8: py image_search_scraper.py --search "object" --nb_images X --directory "dataset/"
+Ajout à faire : une possibilité de faire plusieurs recherches en 1 fois : editer le query et main (tableau)
 _ or directly setting the parameters in the main method and starting the script without command line parameters
 
 """
@@ -32,7 +40,7 @@ import time
 HTTP_TIMEOUT = 10 #seconds
 
 
-def get_soup(url, header):
+def get_soup(url, header): #fonction get_soup
     with urlopen(Request(url, headers=header), timeout=HTTP_TIMEOUT) as url:
         soup = BeautifulSoup(url, "html.parser")
     return soup
@@ -199,7 +207,7 @@ def main(args):
     if(len(args) > 1):
         # parse the command line parameters if any
         parser = argparse.ArgumentParser(description="Scrap Google images")
-        parser.add_argument("-s", "--search", default="gazelle", type=str, help="Search term")
+        parser.add_argument("-s", "--search", default="chat", type=str, help="Search term")
         parser.add_argument("-n", "--nb_images", default=10, type=int, help="Nb images to save")
         parser.add_argument("-f", "--first_index", default=0, type=int, help="First image to save")
         parser.add_argument("-d", "--directory", default="data/", type=str, help="Save directory")
