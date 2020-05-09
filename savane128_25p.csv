@@ -1,0 +1,11 @@
+Catégorie;Nom;Images reconnues;Images de la catégorie;% de précision du modèle
+1;elephant;7;20;35 %
+2;gazelle_grant;11;20;55 %
+3;gazelle_thomson;10;20;50 %
+4;giraffe;15;20;75 %
+5;hyppopotame;2;20;10 %
+6;leopard;11;18;61 %
+7;lion;11;20;55 %
+8;monkey;1;18;5 %
+9;rhinoceros;1;20;5 %
+10;Global;69;176;39 %

@@ -331,7 +331,7 @@ def main(args):
                 else:
                     nb_passes = int(nb_passes)
 
-                binary_mode = input("Tenter une classification binaire ? o/n (o) : ")
+                binary_mode = input("Tenter une classification binaire ? o/n (o) : ") # y a t il 2 choix ou non?
                 if not binary_mode:
                     binary_mode = "o"
                 if binary_mode == "o":
