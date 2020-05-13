@@ -3,16 +3,21 @@ title: "Deep Learning"
 author: "E. ROMETTE & E.GALMICHE & A.FALIGOT"
 date: "06/05/2020"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: 3
   html_document:
     fig_caption: yes
     number_sections: yes
     toc: yes
     toc_depth: 3
     toc_float: true
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
+
+------
+\newpage
 
 # **Nos Essais**
 
@@ -98,6 +103,8 @@ On peut voir sur ce graphique que la précision de réconnaissance de l'IA dépe
 * La courbe verte est constituée de 128 neurones basés sur le corpus savane composé de 693 images, en 9 catégories, l'IA est la plus précise autour de 35 passages.  
 
 * La courbe violette est constituée de 512 neurones basés sur le corpus savane composé de 693 images, en 9 catégories, la précision de l'IA est constante quel que soit le nombre de passages. 
+
+\newpage
 
 # **Conclusion générale**
 
